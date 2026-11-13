@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BA Food: guía para descubrir restaurantes, parrillas, pizzerías y cafeterías de Buenos Aires.">
+  <title>BA Food | Dónde comer en Buenos Aires</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="BA Food, inicio">BA<span>FOOD</span><i>.</i></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="#inicio">Inicio</a>
+      <a href="#lugares">Lugares</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">GUÍA GASTRONÓMICA · BUENOS AIRES</p>
+        <h1>Buenos Aires<br><em>se disfruta</em> en la mesa.</h1>
+        <p class="hero-copy">Desde una buena parrilla hasta esa pizza que siempre querés repetir. Encontrá tu próximo lugar favorito.</p>
+        <a class="button button-primary" href="#lugares">Explorar lugares <span>↗</span></a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Mesa con comida para compartir">
+        <div class="image-note"><strong>BA Food</strong><span>Sabores de nuestra ciudad</span></div>
+      </div>
+      <div class="hero-stamp">BUEN<br>PROVECHO<br>♥</div>
+    </section>
+
+    <section class="intro section-wrap" id="nosotros">
+      <div>
+        <p class="eyebrow">SOBRE BA FOOD</p>
+        <h2>Un mapa de sabores<br>para cada antojo.</h2>
+      </div>
+      <p>Buenos Aires tiene una identidad gastronómica única. Creamos esta guía para reunir opciones, conocer distintos barrios y ayudarte a elegir dónde compartir una buena comida.</p>
+    </section>
+
+    <section class="places section-wrap" id="lugares">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SELECCIÓN BA FOOD</p>
+          <h2>Lugares para descubrir</h2>
+        </div>
+        <span class="section-aside">Una pequeña guía para empezar</span>
+      </div>
+
+      <div class="tools">
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" id="searchInput" placeholder="Buscar por nombre o barrio..." aria-label="Buscar restaurantes">
+        </label>
+        <div class="filters" id="filters" aria-label="Filtrar por categoría">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="parrilla">Parrillas</button>
+          <button class="filter-btn" data-filter="pizza">Pizzerías</button>
+          <button class="filter-btn" data-filter="cafe">Cafeterías</button>
+        </div>
+      </div>
+
+      <p class="results-line" id="resultsLine" aria-live="polite">Mostrando lugares</p>
+      <div class="restaurant-grid" id="restaurantGrid">
+        <article class="restaurant-card" data-category="parrilla" data-search="don julio parrilla palermo carne argentina">
+          <div class="card-photo photo-don"><span class="card-tag">PARrILLA</span><button class="favorite" aria-label="Guardar Don Julio" aria-pressed="false">♡</button></div>
+          <div class="card-body"><p class="neighborhood">PALERMO</p><h3>Don Julio</h3><p>Una parrilla reconocida por sus carnes argentinas y su propuesta tradicional.</p><div class="card-bottom"><span>Guatemala 4699</span><a href="https://www.google.com/maps/search/?api=1&query=Don+Julio+Guatemala+4699+Buenos+Aires" target="_blank" rel="noopener">Ver mapa ↗</a></div></div>
+        </article>
+        <article class="restaurant-card" data-category="pizza" data-search="el imperio de la pizza villa crespo corrientes pizza">
+          <div class="card-photo photo-imperio"><span class="card-tag">PIZZERÍA</span><button class="favorite" aria-label="Guardar El Imperio de la Pizza" aria-pressed="false">♡</button></div>
+          <div class="card-body"><p class="neighborhood">CHACARITA</p><h3>El Imperio de la Pizza</h3><p>Un clásico porteño para probar pizza al molde y fainá.</p><div class="card-bottom"><span>Av. Corrientes 6891</span><a href="https://www.google.com/maps/search/?api=1&query=El+Imperio+de+la+Pizza+Corrientes+6891" target="_blank" rel="noopener">Ver mapa ↗</a></div></div>
+        </article>
+        <article class="restaurant-card" data-category="parrilla" data-search="minga parrilla palermo carne">
+          <div class="card-photo photo-minga"><span class="card-tag">PARRILLA</span><button class="favorite" aria-label="Guardar Minga Parrilla" aria-pressed="false">♡</button></div>
+          <div class="card-body"><p class="neighborhood">PALERMO SOHO</p><h3>Minga Parrilla</h3><p>Una opción de cocina argentina con cortes a la parrilla y platos para compartir.</p><div class="card-bottom"><span>Costa Rica 4528</span><a href="https://www.google.com/maps/search/?api=1&query=Minga+Parrilla+Costa+Rica+4528" target="_blank" rel="noopener">Ver mapa ↗</a></div></div>
+        </article>
+        <article class="restaurant-card" data-category="cafe" data-search="moshu treehouse cafe brunch palermo">
+          <div class="card-photo photo-moshu"><span class="card-tag">CAFETERÍA</span><button class="favorite" aria-label="Guardar Moshu Treehouse" aria-pressed="false">♡</button></div>
+          <div class="card-body"><p class="neighborhood">PALERMO</p><h3>Moshu Treehouse</h3><p>Cafetería para disfrutar café, pastelería y opciones de brunch.</p><div class="card-bottom"><span>Guatemala 4570</span><a href="https://www.google.com/maps/search/?api=1&query=Moshu+Treehouse+Guatemala+4570" target="_blank" rel="noopener">Ver mapa ↗</a></div></div>
+        </article>
+        <article class="restaurant-card" data-category="pizza" data-search="banchero pizzeria corrientes centro fugazzeta">
+          <div class="card-photo photo-banchero"><span class="card-tag">PIZZERÍA</span><button class="favorite" aria-label="Guardar Banchero" aria-pressed="false">♡</button></div>
+          <div class="card-body"><p class="neighborhood">SAN NICOLÁS</p><h3>Banchero</h3><p>Una pizzería tradicional vinculada a la historia de la fugazzeta porteña.</p><div class="card-bottom"><span>Av. Corrientes 1300</span><a href="https://www.google.com/maps/search/?api=1&query=Banchero+Corrientes+1300+Buenos+Aires" target="_blank" rel="noopener">Ver mapa ↗</a></div></div>
+        </article>
+        <article class="restaurant-card" data-category="cafe" data-search="padre coffee roasters cafe palermo brunch">
+          <div class="card-photo photo-padre"><span class="card-tag">CAFETERÍA</span><button class="favorite" aria-label="Guardar PADRE Coffee Roasters" aria-pressed="false">♡</button></div>
+          <div class="card-body"><p class="neighborhood">PALERMO</p><h3>PADRE Coffee Roasters</h3><p>Un café de especialidad con panadería y propuestas para brunch.</p><div class="card-bottom"><span>Honduras 4184</span><a href="https://www.google.com/maps/search/?api=1&query=PADRE+Coffee+Roasters+Honduras+4184" target="_blank" rel="noopener">Ver mapa ↗</a></div></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No encontramos lugares con esa búsqueda. Probá con otro nombre o categoría.</p>
+      <div class="favorites-panel">
+        <div><strong>♡ Tus favoritos</strong><p id="favoritesText">Todavía no guardaste ningún lugar.</p></div>
+        <button class="text-button" id="showFavorites">Ver favoritos</button>
+      </div>
+    </section>
+
+    <section class="categories" id="categorias">
+      <div class="section-wrap">
+        <p class="eyebrow">¿QUÉ TENÉS GANAS DE COMER?</p>
+        <h2>Elegí tu próximo antojo.</h2>
+        <div class="category-grid">
+          <button class="category-tile cat-grill" data-jump-filter="parrilla"><span>01</span><strong>Parrillas</strong><small>El sabor del fuego</small></button>
+          <button class="category-tile cat-pizza" data-jump-filter="pizza"><span>02</span><strong>Pizzerías</strong><small>Un clásico porteño</small></button>
+          <button class="category-tile cat-coffee" data-jump-filter="cafe"><span>03</span><strong>Cafeterías</strong><small>Una pausa rica</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-wrap" id="contacto">
+      <div>
+        <p class="eyebrow">CONTACTO</p>
+        <h2>¿Conocés un lugar<br>que deberíamos sumar?</h2>
+        <p>Compartí tu recomendación con BA Food. ¡Nos encanta descubrir nuevos sabores!</p>
+      </div>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="name">Tu nombre</label>
+        <input id="name" name="name" type="text" placeholder="¿Cómo te llamás?" required>
+        <label for="email">Tu email</label>
+        <input id="email" name="email" type="email" placeholder="nombre@email.com" required>
+        <label for="message">Tu recomendación</label>
+        <textarea id="message" name="message" rows="3" placeholder="Nombre del lugar y barrio..." required></textarea>
+        <button class="button button-primary" type="submit">Enviar recomendación ↗</button>
+        <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo logo-light" href="#inicio">BA<span>FOOD</span><i>.</i></a>
+    <p>Una guía para disfrutar Buenos Aires, plato a plato.</p>
+    <small>Proyecto educativo realizado con HTML, CSS y JavaScript · 2026</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
